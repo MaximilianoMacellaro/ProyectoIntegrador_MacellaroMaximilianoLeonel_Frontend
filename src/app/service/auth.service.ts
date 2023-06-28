@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 })
 export class AuthService {
 
-  authURL = 'https://backendmlm.onrender.com/auth/';
+  authURL = 'http://backendmlm.onrender.com/auth/login';
 
   constructor(private httpClient: HttpClient) { }
 
