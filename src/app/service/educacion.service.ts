@@ -8,7 +8,7 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
 
-  URL = 'https://backendmlm.onrender.com/explab';;
+  URL = 'https://backendmlm.onrender.com/explab/';;
 
   constructor(private httpClient : HttpClient) { }
 
