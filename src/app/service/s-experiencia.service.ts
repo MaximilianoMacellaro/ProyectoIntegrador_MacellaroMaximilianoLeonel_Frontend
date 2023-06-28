@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  URL = 'https://backendmlm.onrender.com/explab/';
+  URL = 'https://backendmlm.onrender.com/explab';
 
   constructor(private httpClient: HttpClient) { }
 
