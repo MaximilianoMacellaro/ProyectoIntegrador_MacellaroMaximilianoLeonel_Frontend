@@ -1,6 +1,10 @@
 <div class="row">
     <h1>Hard & Soft Skills</h1>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
+    <div class="col-lg-2">
+      <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
+  </div>
+
+<div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let skill of skill">
     <circle-progress
     [percent]="(skill.porcentaje)"
     [radius]="100"
@@ -21,7 +25,7 @@
   ></circle-progress> 
 
   <td *ngIf="isLogged">
-    <button class="btn btn-light" routerlink="/editskill/{{skill.id}}">
+    <button class="btn btn-light" routerLink="/editskill/{{skill.id}}">
       <i class="bi bi-pencil-fill"></i></button>
   </td>
   <td *ngIf="isLogged">

@@ -12,7 +12,7 @@ export class SkillService {
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Skill[]>{
-    return this.httpClient.get<Skill[]>(this.URL + 'lista');
+    return this.httpClient.get<Skill[]>(this.URL + '/lista');
   }
 
   public detail(id: number): Observable<Skill>{
