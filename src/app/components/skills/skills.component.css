@@ -6,3 +6,8 @@ h1{
     color: #e4e6eb;
     text-align: center;
 }
+.circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
