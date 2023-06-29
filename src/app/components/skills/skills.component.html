@@ -2,9 +2,11 @@
     <h1>Hard & Soft Skills</h1>
 <div class="text-center col-sm-4 col-md-4 col-lg-4">
     <circle-progress
-    [percent]="90"
+    [percent]="(skill.porcentaje)"
     [radius]="100"
-    [imageSrc]="'../../../assets/html.png'"
+    [imageSrc]="''"
+    [title]="(skill.nombre)"
+    [titleColor]="'#212F3C'"
     [showImage]="true"
     [imageHeight]="70"
     [imageWidth]="70"
@@ -17,94 +19,15 @@
     [animation]="true"
     [animationDuration]="300"
   ></circle-progress> 
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-    [percent]="90"
-    [radius]="100"
-    [imageSrc]="'../../../assets/html.png'"
-    [showImage]="true"
-    [imageHeight]="70"
-    [imageWidth]="70"
-    [showUnits]="false"
-    [showSubtitle]="false"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'#78C000'"
-    [innerStrokeColor]="'#C7E596'"
-    [animation]="true"
-    [animationDuration]="300"
-  ></circle-progress> 
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-    [percent]="90"
-    [radius]="100"
-    [imageSrc]="'../../../assets/html.png'"
-    [showImage]="true"
-    [imageHeight]="70"
-    [imageWidth]="70"
-    [showUnits]="false"
-    [showSubtitle]="false"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'#78C000'"
-    [innerStrokeColor]="'#C7E596'"
-    [animation]="true"
-    [animationDuration]="300"
-  ></circle-progress> 
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-    [percent]="90"
-    [radius]="100"
-    [imageSrc]="'../../../assets/html.png'"
-    [showImage]="true"
-    [imageHeight]="70"
-    [imageWidth]="70"
-    [showUnits]="false"
-    [showSubtitle]="false"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'#78C000'"
-    [innerStrokeColor]="'#C7E596'"
-    [animation]="true"
-    [animationDuration]="300"
-  ></circle-progress> 
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-    [percent]="90"
-    [radius]="100"
-    [imageSrc]="'../../../assets/html.png'"
-    [showImage]="true"
-    [imageHeight]="70"
-    [imageWidth]="70"
-    [showUnits]="false"
-    [showSubtitle]="false"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'#78C000'"
-    [innerStrokeColor]="'#C7E596'"
-    [animation]="true"
-    [animationDuration]="300"
-  ></circle-progress> 
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-    [percent]="90"
-    [radius]="100"
-    [imageSrc]="'../../../assets/html.png'"
-    [showImage]="true"
-    [imageHeight]="70"
-    [imageWidth]="70"
-    [showUnits]="false"
-    [showSubtitle]="false"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'#78C000'"
-    [innerStrokeColor]="'#C7E596'"
-    [animation]="true"
-    [animationDuration]="300"
-  ></circle-progress> 
+
+  <td *ngIf="isLogged">
+    <button class="btn btn-light" routerlink="/editskill/{{skill.id}}">
+      <i class="bi bi-pencil-fill"></i></button>
+  </td>
+  <td *ngIf="isLogged">
+    <button class="btn btn-danger" (click)="delete(skill.id)">
+      <i class="bi bi-trash-fill"></i>BORRAR</button>
+  </td>
+
+  </div>
 </div>
