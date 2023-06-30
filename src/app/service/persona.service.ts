@@ -10,7 +10,7 @@ import {persona} from '../model/persona.model'
 
 export class PersonaService {
 
-URL = 'https://backendmlm.onrender.com/personas';
+URL = 'https://backendmlm.onrender.com/personas/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -23,6 +23,6 @@ URL = 'https://backendmlm.onrender.com/personas';
   }
 
   public update(id: number, Persona: persona): Observable<any[]> {
-    return this.httpClient.put<any>(this.URL + 'update/${id}', persona);
+    return this.httpClient.put<any>(this.URL +  `update/${id} `, persona);
   }
 }
