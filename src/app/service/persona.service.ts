@@ -18,11 +18,11 @@ URL = 'https://backendmlm.onrender.com/personas';
     return this.httpClient.get<persona[]>(this.URL + 'lista');
   }
 
-  public detail(id: number): Observable<persona[]> {
-    return this.httpClient.get<persona[]>(this.URL + 'detail/${id}');
+  public detail(id: number): Observable<persona> {
+    return this.httpClient.get<persona>(this.URL + 'detail/${id}');
   }
 
   public update(id: number, Persona: persona): Observable<any[]> {
-    return this.httpClient.put<any>(this.URL + 'update/${id}', Persona);
+    return this.httpClient.put<any>(this.URL + 'update/${id}', persona);
   }
 }
