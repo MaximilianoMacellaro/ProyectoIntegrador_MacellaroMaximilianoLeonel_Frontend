@@ -11,6 +11,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 export class EditAcercaDeComponent {
   persona: persona = null;
+
   constructor(private activatedRouter: ActivatedRoute,
     private personaService: PersonaService,
     private router: Router,

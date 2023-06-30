@@ -10,7 +10,7 @@ import {persona} from '../model/persona.model'
 
 export class PersonaService {
 
-URL = 'https://backendmlm.onrender.com/personas/';
+URL = 'https://backendmlm.onrender.com/personas';
 
   constructor(private httpClient: HttpClient) { }
 
