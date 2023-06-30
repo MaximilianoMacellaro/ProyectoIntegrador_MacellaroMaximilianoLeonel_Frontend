@@ -5,8 +5,7 @@ import {Storage, getDownloadURL, list, ref, uploadBytes} from '@angular/fire/sto
   providedIn: 'root'
 })
 export class ImageService {
-  url: string = "";
-
+  url: string = '';
   constructor(private storage: Storage) { }
 
   public uploadImage($event:any, name: string) {
